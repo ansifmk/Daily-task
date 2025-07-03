@@ -24,93 +24,162 @@
 // // }console.log(print);
 
 
-// let car = {
-//   brand: "Toyota",
-//   model: "Camry",
-//   year: 2022,
-//   color: "White"
+// (function() {
+//     // IIFE code block
+//     var localVar = 'This is a local variable';
+//     console.log(localVar); // Output: This is a local variable
+// })();
+
+
+
+// function Car(name,year,color){
+//     this.Name=name;
+//     this.Year=year;
+//     this.color=color;
+
+// }
+// const jhon=new Car('bmw',2022,'blue');
+// const jhn=new Car('bm',202,'bue');
+
+// console.log(jhon);
+// console.log(jhn);
+
+
+
+// const user=["a","b","c","d"]
+
+// let [...rest]=user;
+
+// console.log(rest);
+
+
+// const person={
+//     name:"ansif",
+//     age:22,
+//     place:"puthanthani",
 // };
+// let {name, place,age}=person;
+// console.log(name);
+// console.log(place);
+// console.log(age);
 
-// for (let key in car) {
-//   console.log(key + ": " + car[key]);
+
+// function name(){
+//     return["a","b","c","d"]
 // }
-// let carValues = Object.values(car);
+// let[fst,snd,...rest]=name();
+// console.log(fst,snd,...rest);
 
-// for (let value of carValues) {
-//   console.log(value);
+// let obj={
+//     name:"abc",
+//     add:{
+//         country:"india",
+//         state  :{
+//             pincode:56516,
+//             code:"js",
+//             article:{
+//                 topic:"dfaeaaddf"
+//             }
+
+
+//         }
+//     }
 // }
-// function describeCar(carObj) {
-//   return "This is a " + carObj.color + " " + carObj.year + " " + carObj.brand + " " + carObj.model + ".";
-// }
-
-// console.log(describeCar(car));
-
-
-
- 
-
-
-// const arr=[4,5,8,7,2,9];
-// const out=arr.reduce(function(total,curr){
-// if(curr>total){
-//     total=curr
-// }
-// return total;
-// },0); 
-// console.log(out);
-
-// let arr=[]
-
-//  const arr=[4,5,8,7,2,9];
-
-//  arr.forEach(x =>
-//   console.log(x)
-//  )
-   
+// let{name}=obj;
+// console.log(name);
+// let{add:{country: abcd}}=obj
+// console.log(abcd);
+// let{add:{state:{pincode:ef}}}=obj
+// console.log(ef);
+// let{add:{state:{article:{topic:gt}}}}=obj
+// console.log(gt);
 
 
 
+// function outer() {
+//   let a = "Hello";
 
-// const great =x=>x*x;
-// console.log(great(8));
+//   function middle() {
+//     let b = "Ansif";
 
-
-
-
-//leetcode fizzbuzz
-
-// function str(n){
-//     let result=[];
-// for(let i= 1;i<=n;i++){
-//     if(i%3===0 && i%5===0){
-//         result.push ("FizzBuzz");
-//     }else if(i%3===0){
-//         result.push ("Fizz");
-//     }else if(i%5===0){
-//         result.push ("Buzz");
-//     }else{
-//         result.push (i.toString());
+//     function inner() {
+//       console.log(a + " " + b);
 //     }
 
+//     return inner;
+//   }
+
+//   return middle;
 // }
-// return result;
+
+// let step1 = outer();      
+// let step2 = step1();     
+// step2();                   
+
+// sessionStorage.setItem("film","24")
+// localStorage.setItem("year","2024")
+// localStorage.setItem("actor","surya")
+
+// let year=localStorage.getItem("year")
+// console.log(year);
+//  localStorage.remo veItem("actor")
+
+
+
+
+// let name1={
+//     name:" fasil",
+//     age:22,
+//     greet:function(city){
+//         console.log("hello"+" "+this.name+" in "+city);
+
+//     }
 // }
-// console.log(str(15));
-
-
-// function str(x){
-// let a=x.reverse()
-// return a
+// const name2={
+//     name:"ansif"
 // }
-// console.log(str("hello"));
+
+// let printmyname=name1.greet.bind(name2, "malapuram")
+// printmyname();
 
 
- function str(n){
-    if(n===1){
-        return 1;
-    }
-    else{ 
-        return n*str(n-1);
-    }
- }console.log(str(5));
- 
+
+// const map=new Map();
+// map.set("name","ansif");
+// map.set("age",22);
+// map.set("city","ptni");
+
+// console.log(map.get("name"));
+// console.log(map.get("age"));
+
+
+// const map =new Map([['a',1],['b',2]])
+// map.set('c',3)
+// map.delete('b')
+// for(const[key,value]of map){
+//     console.log(key+':'+value);
+
+// }
+
+
+// let a = 1
+// let c = 2
+// [a, c]= [c, a]
+// console.log(a);
+// console.log(c);
+
+
+// let a =4.5;
+// let b=math.round(a);
+// console.log(b);
+
+// console.log(Math.round(-2.5));   // Output: -2
+// console.log(Math.round(-2.6));   // Output: -3
+
+
+const user = { name: "Ansif", age: 22 };
+const extra = { city: "Kozhikode", age: 23 };
+
+const fullUser = { ...user, ...extra };
+
+console.log(fullUser);
