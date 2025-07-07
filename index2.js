@@ -38,25 +38,62 @@
 
 //dailytask 2
 
-function factorial(n){
-if(n===0 || n===1){
-    return 1;
+// function factorial(n){
+// if(n===0 || n===1){
+//     return 1;
+// }
+// return n*factorial(n-1)
+// }
+// console.log(factorial(5));
+
+// function sum(n){
+//     if(n===0){
+//         return 0;
+//     }
+//     return n+sum(n-1);
+// }
+// console.log(sum(5));
+
+
+// function operate(num,callback){
+//     return callback(num);
+
+// }console.log(operate(5,factorial));
+// console.log(operate(5,sum));
+
+
+
+//dailytask 3
+
+
+const clr=["red","green","yellow"];
+const [first,second,third]=clr;
+console.log(first);
+console.log(second);
+console.log(third);
+
+
+
+const user={
+    name:"ansif",
+    email:"ansif@gmail.com",
+    location:"puthanathani"
+};
+const {name,email,location}=user;
+console.log(name);
+console.log(email);
+console.log(location);
+
+function data({name,email,location}){
+console.log(name);
+console.log(email);
+console.log(location);
+
 }
-return n*factorial(n-1)
-}
-console.log(factorial(5));
 
-function sum(n){
-    if(n===0){
-        return 0;
-    }
-    return n+sum(n-1);
-}
-console.log(sum(5));
-
-
-function operate(num,callback){
-    return callback(num);
-
-}console.log(operate(5,factorial));
-console.log(operate(5,sum));
+const userdata={
+    name:"ansif",
+    email:"ansif@gamil.com",
+    location:"puthanathani"
+};
+data(userdata);
